@@ -1,0 +1,14 @@
+.home {
+    padding: 10px;
+}
+.heading {
+    font: optional;
+    color: #031620;
+    font-size: 50px;
+}
+.resume-box{
+    padding: 65px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #FFF8DA;
+}

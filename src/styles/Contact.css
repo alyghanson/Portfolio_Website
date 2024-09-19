@@ -1,0 +1,23 @@
+.contact {
+    margin: auto;
+    margin: 20px;
+}
+.contact .header {
+    font-size: 40px;
+    color: #031620;
+    font-family: monospace;
+}
+.contact .text {
+    margin: 5px;
+    font-size: 15px;
+    font-family: monospace;
+}
+.contact .link {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #031620;
+}
+.contact .link:hover {
+    color: rgb(255, 145, 0);
+}
