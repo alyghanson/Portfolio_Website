@@ -19,11 +19,11 @@ const PortfolioCard = ({title, url, description, photoUrl, date}: PortfolioCardP
     return (
         <div className="Card">
 
-            <div className="LeftCard">
+            {/* <div className="LeftCard">
             
                 <img src={photoUrl} alt="Test Image" />
             
-            </div>
+            </div> */}
 
             <div className="RightCard">
                 <div className="Title">

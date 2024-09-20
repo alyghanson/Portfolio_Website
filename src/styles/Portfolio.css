@@ -1,4 +1,11 @@
 .Page {
+    justify-content: center;
+    background-color: gold;
+    /* background-image: url("../../public/images/background.jpg");
+    background-size: 50%;
+    background-repeat: repeat; */
+
+    padding: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
