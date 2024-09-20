@@ -1,9 +1,12 @@
 import Header from '../components/Header';
+import Portfolio from '../components/Portfolio';
+import "../styles/Portfolio.css"
+
 const Home = () => {
     return(
         <div>
         <Header/>
-        <div>HomePage</div>
+        <Portfolio/>
         </div>
     );
 };
