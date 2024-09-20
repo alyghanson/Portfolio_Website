@@ -1,5 +1,5 @@
 .Card {
-    display: flexbox;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%;
@@ -14,7 +14,7 @@
     
 }
 .InnerCard {
-
+    float: right;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -60,7 +60,8 @@
 }
 
 .Photo {
-    max-width: 100%;
+    max-width: auto;
+    height: auto;
     margin: 20px;
     float: left;
 }
