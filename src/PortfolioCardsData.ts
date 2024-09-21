@@ -5,7 +5,7 @@ export const PortfolioCardsData = [
     {
         title: "MINST Fashion Image Recognition",
         url: "URL for Project 1",
-        description: "Oh he deci neon. Way advantage age led listening belonging supposingion. Unpleasing up announcing unpleasant themselves oh do on. Way advantage age led listening belonging supposingverything. Whose her enjoy chief new young. Felicity if ye required likewise so doubtful. On so attention necessary at by provision otherwise existence direction. Unpleasing up announcing unpleasant themselves oh do on. Way advantage age led listening belonging supposing",
+        description: "Description here... blah blah blah blah blah",
         photoUrl: "images/minst_data.png",
         date: "Project 1 Date",
     },

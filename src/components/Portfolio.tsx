@@ -9,7 +9,7 @@ const Portfolio = () => {
         <div>
             <div className='Page'>
             {PortfolioCardsData.map((card, index) => {
-                return <PortfolioCard {...card}></PortfolioCard>
+                return <PortfolioCard {...card} key={index}></PortfolioCard>
             })
             }
             </div>
