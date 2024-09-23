@@ -1,26 +1,40 @@
 import Header from "../components/Header";
 import "../styles/Contact.css"
-import { useState } from "react";
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 
-const Contact = () => {
-  // use state variables to get info from form for submission
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+const ContactMe: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
 
-  console.log("First Name:", firstName)
-  console.log("Last Name:", lastName)
-  console.log("Email:", email)
-  if (message){
-    console.log("Message exists!")
-  } 
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+
+
+      emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID!, //Service Id
+        process.env.REACT_APP_TEMPLATE_ID!, // Template Id
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY! //Public Key
+      )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    }
+  };
+
+
 
   return (
     <div> 
       <Header/>
+      <div className="title">I would love to hear from you!</div>
       <div className="container">
         <div className="contactInfo">
           <div>
@@ -49,42 +63,30 @@ const Contact = () => {
 
           </ul>
         </div>
-
         <div className="contactForm">
-          <h2>
-            Send me a message!
-          </h2>
-          <div className="formBox">
-            <div className="inputBox w50">
-            {/* <span>First Name</span> */}
-            <input onChange={e => setFirstName(e.currentTarget.value)} placeholder="First Name" type="text" />
-            </div>
+          <h2>Message Me!</h2>
+            <form className="formBox" ref={form} onSubmit={sendEmail}>
             
             <div className="inputBox w50">
-            {/* <span>Last Name</span> */}
-            <input onChange={e => setLastName(e.currentTarget.value)} placeholder="Last Name" type="text"/>
+            <input type="text" name="user_name" placeholder="Your Name"required />
             </div>
 
             <div className="inputBox w50">
-            {/* <span>Email</span> */}
-            <input onChange={e => setEmail(e.currentTarget.value)} placeholder="Email" type="text"/>
+            <input type="email" name="user_email" placeholder="Your Email"required />
             </div>
 
             <div className="inputBox w100">
-            {/* <span>Message</span> */}
-            <textarea role="textbox" onChange={e => setMessage(e.currentTarget.value)} placeholder="Write Your Message Here" />
+            <textarea name="message" placeholder="Message"required />
             </div>
-
-            <div>
-              {/* <button className="inputBox w100" onClick={}>Submit</button> */}
+            <div className="inputBox">
+            <input type="submit" value="Send" />
             </div>
-      
+          </form>
+      </div>
 
-          </div>
-        </div>
       </div>
     </div>
   );
 };
   
-export default Contact;
+export default ContactMe;
