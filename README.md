@@ -1,17 +1,10 @@
-Personal Project Portfolio Website in the works.
-
-Credits:
-Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+Personal Project Portfolio Website in the works....
 
 ## Contact Page
-
-- Uses React Use State to populate form on changes
-- ReCapta to verify humans 
-- Sends email using Email.JS
-- Sends response to emailer and create a submission success flash
+- Uses Email.JS to send form through email
+- reCAPTCHA for verification
 
 
-### ToDo
-#### Add credits
 Credits:
 Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+Contact Page inspired by: https://github.com/Yonghee9106/contact-form/
