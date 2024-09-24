@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/Index.css';
 import App from './App';
-import { HashRouter as Router } from 'react-router-dom';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
