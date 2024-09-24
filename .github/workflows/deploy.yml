@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "16"  # Updated Node.js version
+          node-version: "20"  # Updated Node.js version
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       
       - name: Install dependencies
@@ -52,7 +52,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run build
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           path: ./build
   
