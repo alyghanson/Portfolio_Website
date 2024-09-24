@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
 import { useState } from 'react';
 
@@ -30,7 +31,7 @@ const MenuItems: React.FC<ItemProps> = ({ item }) => {
             <Dropdown submenus={item.submenu} dropdown={dropdown} />
           </>
         ) : (
-          <a href={item.url}>{item.title}</a>
+          <Link to={item.url}>{item.title}</Link>
         )}
       </li>
     );

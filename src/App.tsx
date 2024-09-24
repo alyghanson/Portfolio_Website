@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Resume from "./pages/Resume";
 import Contact from './pages/Contact';
@@ -8,6 +8,9 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 
 export default function App() {
+  const location = useLocation()
+  console.log('location:', location)
+
   return (
     <Routes>
       <Route index element={<Intro />} />
