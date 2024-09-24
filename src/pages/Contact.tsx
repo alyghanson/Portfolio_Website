@@ -2,12 +2,17 @@ import Header from "../components/Header";
 import "../styles/Contact.css"
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const ContactMe: React.FC = () => {
 
   const form = useRef<HTMLFormElement>(null);
+
+  //for submit button
   const [submitted, setSubmitted] = useState(false)
+  //for reCAPTCHA
+  const [captcha, setCaptcha] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -15,7 +20,10 @@ const ContactMe: React.FC = () => {
     // setSubmitted(true); //change submit button to flash message 
     // form.current!.reset(); // Reset the form here
     // setTimeout(() => setSubmitted(false), 2000); // Reset success state after 2 seconds
-
+    if (!captcha) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
     if (form.current) {
       emailjs.sendForm(
         process.env.REACT_APP_SERVICE_ID!, //Service Id
@@ -84,6 +92,15 @@ const ContactMe: React.FC = () => {
             <div className="inputBox w100">
             <textarea name="message" placeholder="Message"required />
             </div>
+
+            <div className="inputBox">
+              <ReCAPTCHA
+              sitekey= "6Let9U0qAAAAABhQREVBqGo_sCQWwln1G1_h0KSi" // Replace with your site key Make hidded!
+              onChange={() => setCaptcha(true)}
+              />
+            </div>
+
+
             <div className="inputBox">
             <input type="submit" value= {submitted ? "Success" : "Send"} />
             </div>
