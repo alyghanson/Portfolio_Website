@@ -95,7 +95,7 @@ const ContactMe: React.FC = () => {
 
             <div className="inputBox">
               <ReCAPTCHA
-              sitekey= "6Let9U0qAAAAABhQREVBqGo_sCQWwln1G1_h0KSi" // Replace with your site key Make hidded!
+              sitekey= "6Lc5-U0qAAAAAKT7wKsTLdJZJ3JrTpsKFDonx-fH"
               onChange={() => setCaptcha(true)}
               />
             </div>
