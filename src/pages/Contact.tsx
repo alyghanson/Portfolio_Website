@@ -41,14 +41,14 @@ const ContactMe: React.FC = () => {
             <h2>Contact Info</h2>
             <ul className="info">
               <li>
-              <img width={20} src="images/earth-americas.svg"></img>
+              <img width={20} src="images/earth-americas.svg" alt=""></img>
                 <span>
                   Eugene, Oregon
                   United States
                 </span>
               </li>
               <li>
-                <img width={20}src="images/mailbox.svg"></img>
+                <img width={20}src="images/mailbox.svg" alt=""></img>
                 <span>
                   lyssaghan2@gmail.com
                 </span>
@@ -57,9 +57,9 @@ const ContactMe: React.FC = () => {
           </div>
           <ul className="socialIcon">
 
-            <li><a href="#"><img width={20} src="images/bitbucket.png" alt=""></img></a></li>
-            <li><a href="#"><img width={20} src="images/linkedin.svg" alt=""></img></a></li>
-            <li><a href="#"><img width={20} src="images/github.svg" alt=""></img></a></li>
+            <li><a href="https://bitbucket.org/ahanson2cs322/proj6-rest/src/master/"><img width={20} src="images/bitbucket.png" alt=""></img></a></li>
+            <li><a href="https://www.linkedin.com/in/alyghanson/"><img width={20} src="images/linkedin.svg" alt=""></img></a></li>
+            <li><a href="https://github.com/alyghanson"><img width={20} src="images/github.svg" alt=""></img></a></li>
 
           </ul>
         </div>
