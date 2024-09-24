@@ -31,7 +31,6 @@ const ContactMe: React.FC = () => {
         process.env.REACT_APP_PUBLIC_KEY! //Public Key
       )
       .then((result) => {
-        console.log("Site Key:", process.env.REACT_APP_SITE_KEY);
         console.log(result.text);
         setSubmitted(true); //change submit button to flash message 
         form.current!.reset(); // Reset the form here

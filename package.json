@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alyghanson.github.io/Portfolio_Website",
+  "homepage": "https://alyghanson.github.io/Portfolio_Website/#",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@emailjs/browser": "^4.4.1",
