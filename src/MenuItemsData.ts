@@ -4,23 +4,23 @@
 export const MenuItemsData = [
     {
         title: 'Home',
-        url: '/portfolio/home',
+        url: '/home',
     },
     {
         title: 'Resume',
-        url: '/portfolio/resume',
+        url: '/resume',
     },
     {
         title: 'About Me',
-        url: '/portfolio/about',
+        url: '/about',
     },
     {
         title: 'Contact', 
-        url: '/portfolio/contact',
+        url: '/contact',
     },
     {
         title: 'Links',
-        url: '/portfolio/contact',
+        url: '/contact',
         // Nested drop down
         submenu: [
             {
