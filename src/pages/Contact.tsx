@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const ContactMe: React.FC = () => {
-
+  const re_key =  process.env.REACT_APP_SITE_KEY 
   const form = useRef<HTMLFormElement>(null);
 
   //for submit button
@@ -35,6 +35,7 @@ const ContactMe: React.FC = () => {
         console.log(result.text);
         setSubmitted(true); //change submit button to flash message 
         form.current!.reset(); // Reset the form here
+        setCaptcha(false) // Reset the recaptcha
         setTimeout(() => setSubmitted(false), 2000); // Reset success state after 2 seconds
       }, (error) => {
         console.log(error.text);
@@ -95,7 +96,7 @@ const ContactMe: React.FC = () => {
 
             <div className="inputBox">
               <ReCAPTCHA
-              sitekey= "6Lc5-U0qAAAAAKT7wKsTLdJZJ3JrTpsKFDonx-fH"
+              sitekey={re_key || ''}
               onChange={() => setCaptcha(true)}
               />
             </div>
