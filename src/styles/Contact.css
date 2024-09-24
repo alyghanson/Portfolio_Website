@@ -12,13 +12,15 @@
 
 .title {
     position: absolute;
-    top: 115px;
-    right: 10px;
+    margin-left: 40%;
+    margin-bottom: -7%;
+    margin-top: 3%;
+    margin-right: 3%;
     font-size: -webkit-xxx-large;
 }
 
 
-section {
+.section {
     display: flex;
     justify-content: center;
     align-items: center;

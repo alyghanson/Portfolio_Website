@@ -1,20 +1,22 @@
 import Header from "../components/Header";
 import "../styles/Contact.css"
-
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-
 const ContactMe: React.FC = () => {
+
   const form = useRef<HTMLFormElement>(null);
+  const [submitted, setSubmitted] = useState(false)
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    //Uncomment to test locally 
+    // setSubmitted(true); //change submit button to flash message 
+    // form.current!.reset(); // Reset the form here
+    // setTimeout(() => setSubmitted(false), 2000); // Reset success state after 2 seconds
 
     if (form.current) {
-
-
       emailjs.sendForm(
         process.env.REACT_APP_SERVICE_ID!, //Service Id
         process.env.REACT_APP_TEMPLATE_ID!, // Template Id
@@ -23,11 +25,15 @@ const ContactMe: React.FC = () => {
       )
       .then((result) => {
         console.log(result.text);
+        setSubmitted(true); //change submit button to flash message 
+        form.current!.reset(); // Reset the form here
+        setTimeout(() => setSubmitted(false), 2000); // Reset success state after 2 seconds
       }, (error) => {
         console.log(error.text);
       });
     }
   };
+
 
 
 
@@ -79,7 +85,7 @@ const ContactMe: React.FC = () => {
             <textarea name="message" placeholder="Message"required />
             </div>
             <div className="inputBox">
-            <input type="submit" value="Send" />
+            <input type="submit" value= {submitted ? "Success" : "Send"} />
             </div>
           </form>
       </div>
