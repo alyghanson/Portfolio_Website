@@ -39,7 +39,7 @@ const PortfolioCard = ({title, url, description, photoUrl, date}: PortfolioCardP
                 </div>
 
                 <div className="Url">
-                    <a href={url} target="_blank">Check It Out Here</a>
+                    <a href={url} target="_blank" rel="noreferrer">Check It Out Here</a>
                 </div>
             </div>
 
