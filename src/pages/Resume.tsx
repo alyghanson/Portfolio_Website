@@ -7,9 +7,9 @@ const Resume = () => {
     return (
       <div>
       <Header/>
-      <>Change this!</>
+      
         <div className='resume-box'>
-          <div dangerouslySetInnerHTML={{ __html: template }}></div>
+          <div> Resume will be up and running shortly! Feel free to take a look at my LinkedIn!</div>
         </div>
       </div>
     );

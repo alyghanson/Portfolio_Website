@@ -84,7 +84,7 @@ header {
 .desktop-nav .menu-items a:hover,
 .desktop-nav .menu-items button:hover {
   background-color: #f2f2f2;
-  border-radius: 30%;
+
 }
 
 .desktop-nav .arrow::after {
@@ -109,7 +109,7 @@ header {
   padding: 0.5rem 0;
   list-style: none;
   background-color: #fff;
-  border-radius: 0.5rem;
+
   display: none;
 }
 

@@ -3,7 +3,7 @@ const About = () => {
     return(        
         <div>
         <Header/>
-        <div>About Page</div>
+        <div>About Page will be up and running shortly - Check Back Soon!</div>
         </div>
     );
 };
